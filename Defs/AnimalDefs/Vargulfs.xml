@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+   
+   <!-- Demigryph leather -->
+
+  <!-- <ThingDef ParentName="LeatherBase">
+    <defName>pphhyy_WarmLeather_Demigryph</defName>
+    <label>Demigryph Tropic fur</label>
+    <description>A soft furry pelt harvested from a Demigryph. It is difficult to pierce and insulates well against heat.</description>
+    <graphicData>
+      <color>(238,231,184)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(238,231,184)</color>
+      <commonality>0.025</commonality>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>pphhyy_coldLeather_Demigryph</defName>
+    <label>Demigryph Artic fur</label>
+    <description>A soft furry pelt harvested from a Demigryph. It is difficult to pierce and insulates well against cold.</description>
+    <graphicData>
+      <color>(247,247,247)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(247,247,247)</color>
+      <commonality>0.025</commonality>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef> -->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>pphhyy_Leather_Vargulf</defName>
+    <label>Vargulf fur</label>
+    <description>A soft furry pelt harvested from a Vargulf. It is difficult to pierce.</description>
+    <graphicData>
+      <color>(62,62,62)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(62,62,62)</color>
+      <commonality>0.025</commonality>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <!-- DemigryphClaw -->
+
+  <!-- <ThingDef ParentName="OrganicProductBase">
+		<defName>pphhyy_AnimalProduct_DemigryphClaw</defName>
+		<label>Demigryph Claw</label>
+		<description>Demigryph Claws taken as trophies from slain demigrphs.</description>
+		<graphicData>
+		  <texPath>Item/DemigryphClaw/DemigryphClaw</texPath>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<statBases>
+		  <MarketValue>10</MarketValue>
+		  <Mass>0.045</Mass>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+    <stackLimit>10</stackLimit>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef> -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>pphhyy_Vargulf</defName>
+    <label>Vargulf</label>
+    <devNote>cow-1</devNote>
+    <description>.</description>
+    <modExtensions>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<bodyClock>Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
+    <statBases>
+      <MoveSpeed>5.5</MoveSpeed>
+      <MarketValue>1100</MarketValue>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>4</FilthRate>
+      <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <race>
+      <herdAnimal>true</herdAnimal>
+      <maxPreyBodySize>5</maxPreyBodySize>
+      <body>pphhyy_QuadrupedAnimal_Vargulf</body>
+      <baseBodySize>2.4</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <baseHungerRate>0.35</baseHungerRate>
+      <foodType>CarnivoreAnimalStrict, Kibble</foodType>
+      <leatherDef>pphhyy_Leather_Vargulf</leatherDef>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <wildness>0.90</wildness>
+      <predator>true</predator>
+      <petness>0.2</petness>
+      <trainability>Intermediate</trainability>
+      <manhunterOnTameFailChance>0.9</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <meatLabel>Vargulf meat</meatLabel>
+      <packAnimal>true</packAnimal>
+      <wildBiomes>
+                <TemperateForest>0.02</TemperateForest>
+                <TemperateSwamp>0.02</TemperateSwamp>
+                <AridShrubland>0.02</AridShrubland>
+                <BorealForest>0.02</BorealForest>
+                <TropicalRainforest>0.02</TropicalRainforest>
+                <TropicalSwamp>0.02</TropicalSwamp>
+                <Tundra>0.02</Tundra>
+                <ColdBog>0.02</ColdBog>
+                <DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">0.08</DankPyon_DarkForest>
+                <!-- <Desert>0.01</Desert>
+                <ExtremeDesert>0.01</ExtremeDesert> -->
+      </wildBiomes>
+      <lifeExpectancy>100</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Warg_Wounded</soundWounded>
+          <soundDeath>Pawn_Warg_Death</soundDeath>
+          <soundCall>Pawn_Warg_Call</soundCall>
+          <soundAngry>Pawn_Warg_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+          <soundWounded>Pawn_Warg_Wounded</soundWounded>
+          <soundDeath>Pawn_Warg_Death</soundDeath>
+          <soundCall>Pawn_Warg_Call</soundCall>
+          <soundAngry>Pawn_Warg_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Warg_Wounded</soundWounded>
+          <soundDeath>Pawn_Warg_Death</soundDeath>
+          <soundCall>Pawn_Warg_Call</soundCall>
+          <soundAngry>Pawn_Warg_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <!-- <butcherProducts>
+		  <pphhyy_AnimalProduct_DemigryphFeathers>2</pphhyy_AnimalProduct_DemigryphFeathers>
+      <pphhyy_AnimalProduct_DemigryphClaw>1</pphhyy_AnimalProduct_DemigryphClaw>
+		</butcherProducts> -->
+    <comps>
+    </comps>
+    <tradeTags>
+      <li>AnimalFighter</li>
+      <li>AnimalExotic</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>AnimalJaw</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>28</power>
+        <armorPenetration>0.50</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef Name="pphhyy_Vargulf" ParentName="AnimalKindBase">
+    <defName>pphhyy_Vargulf</defName>
+    <label>Vargulf</label>
+    <labelMale>Vargulf</labelMale>
+    <labelFemale>Vargulf</labelFemale>
+    <race>pphhyy_Vargulf</race>
+    <combatPower>200</combatPower>
+    <ecoSystemWeight>1.1</ecoSystemWeight>
+    <wildGroupSize>1~2</wildGroupSize>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li><texPath>Animal/Vargulf/Vargulf1</texPath></li>
+      <li><texPath>Animal/Vargulf/Vargulf2</texPath></li>
+      <li><texPath>Animal/Vargulf/Vargulf3</texPath></li>
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <label>Chick</label>
+        <bodyGraphicData>
+          <texPath>Animal/Vargulf/Vargulf</texPath>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animal/Vargulf/Dessicated_Vargulf_east</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animal/Vargulf/Vargulf</texPath>
+          <drawSize>2.0</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animal/Vargulf/Dessicated_Vargulf_east</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animal/Vargulf/Vargulf</texPath>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Animal/Vargulf/Dessicated_Vargulf_east</texPath>
+          <drawSize>2.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>
