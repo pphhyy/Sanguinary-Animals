@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MealCooked">
+    <defName>pphhyy_MealLeSangEggsFried</defName>
+    <label>LeSang Eggs Fried</label>
+    <description>.</description>
+    <graphicData>
+      <texPath>Item/Meal/LeSangEggsFried</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+		<MarketValue>20</MarketValue>
+		<Nutrition>1.0</Nutrition>
+		<WorkToMake>120</WorkToMake>
+		<Mass>0.5</Mass>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <tasteThought>AteFineMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>20</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetHemogen">
+          <offset>0.2</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <rotatable>false</rotatable>
+  </ThingDef> 
+
+<RecipeDef>
+  <defName>pphhyy_CookMealLeSangEggsFried</defName>
+  <label>cook LeSang fried eggs</label>
+  <description>Cook a straightforward meal from eggs.</description>
+  <jobString>Frying eggs.</jobString>
+  <workSpeedStat>CookSpeed</workSpeedStat>
+  <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+  <effectWorking>Cook</effectWorking>
+  <soundWorking>Recipe_CookMeal</soundWorking>
+  <allowMixingIngredients>true</allowMixingIngredients>
+  <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+  <workAmount>100</workAmount>
+	<recipeUsers>
+	    <li>Campfire</li>
+        <li>FueledStove</li>
+        <li>ElectricStove</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_RusticCookingTable</li>
+	</recipeUsers>
+  <ingredients>
+	<li>
+	  <filter>
+		<thingDefs>
+			<li>EggBloodScarabUnfertilized</li>
+		</thingDefs>
+	  </filter>
+	  <count>0.5</count>
+    </li>
+    <li>
+      <filter>
+		<thingDefs>
+			<li>HemogenPack</li>
+		</thingDefs>
+	  </filter>
+	  <count>0.1</count>
+	</li>
+  </ingredients>
+  <products>
+	<pphhyy_MealLeSangEggsFried>1</pphhyy_MealLeSangEggsFried>
+  </products>
+  <workSkill>Cooking</workSkill>
+  <fixedIngredientFilter>
+      <thingDefs>
+        <li>EggBloodScarabUnfertilized</li>
+        <li>HemogenPack</li>
+      </thingDefs>
+  </fixedIngredientFilter>
+  <!-- <defaultIngredientFilter>
+	<categories>
+	  <li>EggsUnfertilized</li>
+	</categories>
+	<disallowedCategories>
+	  <li>EggsFertilized</li>
+	</disallowedCategories>
+		  <disallowedThingDefs>
+			  <li>Meat_Human</li>
+			  <li>Meat_Megaspider</li>
+			  <li>InsectJelly</li>
+			  <li>Milk</li>				
+		  </disallowedThingDefs>
+  </defaultIngredientFilter> -->
+    <!-- <researchPrerequisites>
+        <li></li>
+    </researchPrerequisites> -->
+</RecipeDef>
+
+<!-- Fried Eggs Bulk-->
+
+<!-- <RecipeDef>
+  <defName>DankPyon_CookMealFriedEggsBulk</defName>
+  <label>cook fried eggs x5</label>
+  <description>Cook a straightforward meal from eggs in bulk.</description>
+  <jobString>Frying 5 eggs.</jobString>
+  <workSpeedStat>CookSpeed</workSpeedStat>
+  <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+  <effectWorking>Cook</effectWorking>
+  <soundWorking>Recipe_CookMeal</soundWorking>
+  <allowMixingIngredients>true</allowMixingIngredients>
+  <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+  <workAmount>500</workAmount>
+	<recipeUsers>
+	  <li>DankPyon_RusticCookingTable</li>
+	  	  			
+	</recipeUsers>
+  <ingredients>
+	<li>
+	  <filter>
+		<categories>
+		  <li>EggsUnfertilized</li>
+		</categories>
+	  </filter>
+	  <count>2.5</count>
+	</li>
+  </ingredients>
+  <products>
+	<DankPyon_MealFriedEggs>5</DankPyon_MealFriedEggs>
+  </products>
+  <workSkill>Cooking</workSkill>
+  <fixedIngredientFilter>
+	<categories>
+	  <li>EggsUnfertilized</li>
+	</categories>
+	<specialFiltersToDisallow>
+	  <li>AllowPlantFood</li>
+	</specialFiltersToDisallow>
+  </fixedIngredientFilter>
+  <defaultIngredientFilter>
+	<categories>
+	  <li>EggsUnfertilized</li>
+	</categories>
+	<disallowedCategories>
+	  <li>EggsFertilized</li>
+	</disallowedCategories>
+		  <disallowedThingDefs>
+			  <li>Meat_Human</li>
+			  <li>Meat_Megaspider</li>
+			  <li>InsectJelly</li>
+			  <li>Milk</li>				
+		  </disallowedThingDefs>
+  </defaultIngredientFilter>
+  <researchPrerequisites>
+	<li>DankPyon_BasicCooking</li>
+</researchPrerequisites>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>DankPyon_CookMealTomatoOmelette</defName>
+	<label>cook tomato omelette</label>
+	<description>Cook tomato omelette.</description>
+	<jobString>Cooking tomato omelette.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+<soundWorking>Recipe_CookMeal</soundWorking>
+<allowMixingIngredients>true</allowMixingIngredients>
+<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+<workAmount>500</workAmount> 
+  <recipeUsers>	  
+	<li>DankPyon_RusticCookingTable</li>
+	<li>DankPyon_RusticHearth</li>
+  </recipeUsers>	
+<ingredients>
+		<li>
+			<filter>
+				<categories>
+						<li>EggsUnfertilized</li>
+				  </categories>
+			</filter>
+			<count>0.25</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DankPyon_RawTomatoes</li>
+				  </thingDefs>
+			</filter>
+			<count>0.15</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DankPyon_RawOnions</li>
+				  </thingDefs>
+			</filter>
+			<count>0.15</count>
+		</li>
+	</ingredients>
+	<products>
+  <DankPyon_MealTomatoOmelette>1</DankPyon_MealTomatoOmelette>
+</products>
+	<fixedIngredientFilter>
+		<categories>
+			<li>FoodRaw</li>
+		</categories>
+  <specialFiltersToDisallow>
+	<li>AllowPlantFood</li>
+  </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<categories>
+			<li>FoodRaw</li>
+		</categories>
+  <disallowedCategories>
+	<li>EggsFertilized</li>
+  </disallowedCategories>
+		<disallowedThingDefs>
+			<li>Meat_Human</li>
+			<li>Meat_Megaspider</li>
+			<li>InsectJelly</li>
+		</disallowedThingDefs>
+	</defaultIngredientFilter>
+<workSkill>Cooking</workSkill>
+<researchPrerequisites>
+	<li>DankPyon_IntermediateCooking</li>
+</researchPrerequisites>
+</RecipeDef>
+
+  <ThingDef ParentName="MealCooked">
+    <defName>DankPyon_MealFriedEggs</defName>
+    <label>Fried Eggs</label>
+    <description>A simple meal, consisting of eggs quickly prepared and optionally served with a light sprinkling of salt and or pepper.</description>
+    <graphicData>
+      <texPath>Meal/FriedEggs</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+		<MarketValue>15</MarketValue>
+		<Nutrition>0.9</Nutrition>
+		<WorkToMake>100</WorkToMake>	
+		<Mass>0.5</Mass>
+    </statBases>	
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-8</optimalityOffsetFeedingAnimals>  
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>DankPyon_AteFriedEggs</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <rotatable>false</rotatable>
+  </ThingDef>  -->
+
+</Defs>
