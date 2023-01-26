@@ -1,51 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-   
-   <!-- Demigryph leather -->
-
-  <!-- <ThingDef ParentName="LeatherBase">
-    <defName>pphhyy_WarmLeather_Demigryph</defName>
-    <label>Demigryph Tropic fur</label>
-    <description>A soft furry pelt harvested from a Demigryph. It is difficult to pierce and insulates well against heat.</description>
-    <graphicData>
-      <color>(238,231,184)</color>
-    </graphicData>
-    <statBases>
-      <MarketValue>7.0</MarketValue>
-      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
-      <StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
-      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
-    </statBases>
-    <stuffProps>
-      <color>(238,231,184)</color>
-      <commonality>0.025</commonality>
-      <statFactors>
-        <Beauty>2</Beauty>
-      </statFactors>
-    </stuffProps>
-  </ThingDef>
-
-  <ThingDef ParentName="LeatherBase">
-    <defName>pphhyy_coldLeather_Demigryph</defName>
-    <label>Demigryph Artic fur</label>
-    <description>A soft furry pelt harvested from a Demigryph. It is difficult to pierce and insulates well against cold.</description>
-    <graphicData>
-      <color>(247,247,247)</color>
-    </graphicData>
-    <statBases>
-      <MarketValue>7.0</MarketValue>
-      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
-      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
-      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
-    </statBases>
-    <stuffProps>
-      <color>(247,247,247)</color>
-      <commonality>0.025</commonality>
-      <statFactors>
-        <Beauty>2</Beauty>
-      </statFactors>
-    </stuffProps>
-  </ThingDef> -->
 
   <ThingDef ParentName="LeatherBase">
     <defName>pphhyy_Leather_Vargulf</defName>
@@ -98,7 +52,7 @@
     <defName>pphhyy_Vargulf</defName>
     <label>Vargulf</label>
     <devNote>cow-1</devNote>
-    <description>.</description>
+    <description>Vargulfs stalk in the night, using their monstrous body to pin and feed on unsuspecting pray. They require a constant supply of meat and fresh blood. Perfect battle mounts for the night time traveler as very few creatures can stand agasint one... if you can survive taming one.</description>
     <modExtensions>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<bodyClock>Nocturnal</bodyClock>
@@ -107,8 +61,8 @@
     <statBases>
       <MoveSpeed>5.5</MoveSpeed>
       <MarketValue>1100</MarketValue>
-      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
-      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <ComfyTemperatureMax>30</ComfyTemperatureMax>
       <FilthRate>4</FilthRate>
       <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
     </statBases>
@@ -138,8 +92,8 @@
                 <BorealForest>0.02</BorealForest>
                 <TropicalRainforest>0.02</TropicalRainforest>
                 <TropicalSwamp>0.02</TropicalSwamp>
-                <Tundra>0.02</Tundra>
-                <ColdBog>0.02</ColdBog>
+                <Tundra>0.06</Tundra>
+                <ColdBog>0.06</ColdBog>
                 <DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">0.08</DankPyon_DarkForest>
                 <!-- <Desert>0.01</Desert>
                 <ExtremeDesert>0.01</ExtremeDesert> -->
@@ -149,26 +103,26 @@
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
-          <soundWounded>Pawn_Warg_Wounded</soundWounded>
-          <soundDeath>Pawn_Warg_Death</soundDeath>
-          <soundCall>Pawn_Warg_Call</soundCall>
-          <soundAngry>Pawn_Warg_Angry</soundAngry>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
         </li>
         <li>
           <def>AnimalJuvenile</def>
           <minAge>0.25</minAge>
-          <soundWounded>Pawn_Warg_Wounded</soundWounded>
-          <soundDeath>Pawn_Warg_Death</soundDeath>
-          <soundCall>Pawn_Warg_Call</soundCall>
-          <soundAngry>Pawn_Warg_Angry</soundAngry>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
         </li>
         <li>
           <def>AnimalAdult</def>
           <minAge>0.5</minAge>
-          <soundWounded>Pawn_Warg_Wounded</soundWounded>
-          <soundDeath>Pawn_Warg_Death</soundDeath>
-          <soundCall>Pawn_Warg_Call</soundCall>
-          <soundAngry>Pawn_Warg_Angry</soundAngry>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>

@@ -39,7 +39,6 @@
           <MarketValue>10</MarketValue>
 		</statBases>
 		<comps>
-
 		</comps>
 		<tradeTags>
 			<li>Exotic</li>	
@@ -49,7 +48,12 @@
   <ThingDef ParentName="BaseInsect">
     <defName>pphhyy_BloodScarab</defName>
     <label>BloodScarab</label>
-    <description>.</description>
+    <description>Not quite a tick, yet not quite a mosquito. The BloodScarab is something worse, feeding off the dead and dying the females store blood in there body for when they reach maturity and feed their offspring the blood. Those who need blood often farm the scarabs for hemogen.</description>
+    <modExtensions>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<bodyClock>Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
     <statBases>
       <MoveSpeed>4</MoveSpeed>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
@@ -100,6 +104,7 @@
       <lifeExpectancy>6</lifeExpectancy>
       <wildness>0.1</wildness>
       <trainability>Intermediate</trainability>
+      <foodType>CarnivoreAnimalStrict, Kibble</foodType>
       <lifeStageAges>
         <li>
           <def>EusocialInsectLarva</def>

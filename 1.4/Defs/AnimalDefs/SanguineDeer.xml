@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>pphhyy_Leather_SanguineDeer</defName>
+    <label>SanguineDeer leather</label>
+    <description>A soft furry pelt harvested from a Sanguine Deer. It is difficult to pierce.</description>
+    <graphicData>
+      <color>(62,62,62)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(62,62,62)</color>
+      <commonality>0.025</commonality>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>pphhyy_Wool_SanguineDeer</defName>
+    <label>Sanguine Deer wool</label>
+    <description>Sanguine Deer wool with its dark colour is great for cold climates.</description>
+    <possessionCount>0</possessionCount>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.70</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+    </statBases>
+    <graphicData>
+      <color>(62,62,62)</color>
+    </graphicData>
+    <stuffProps>
+      <commonality>0.025</commonality>
+      <color>(62,62,62)</color>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>pphhyy_SanguineDeer</defName>
+    <label>Sanguine Deer</label>
+    <description>Nocturnal fanged deer, very friendly and cute untill they need to eat. Since they usually pray on small animals they arnt much of a threat to a colony and can even make good pets. Can be sheared for a cold resistant wool, perfect for cold climates.</description>
+    <modExtensions>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<bodyClock>Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
+    <statBases>
+      <MoveSpeed>6</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <ComfyTemperatureMax>30</ComfyTemperatureMax>
+      <FilthRate>6</FilthRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>pphhyy_Wool_SanguineDeer</woolDef>
+        <shearIntervalDays>15</shearIntervalDays>
+        <woolAmount>60</woolAmount>
+      </li>
+    </comps>
+    <uiIconScale>1.25</uiIconScale>
+    <tools>
+      <li>
+        <label>left hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithHooves</body>
+      <herdAnimal>true</herdAnimal>
+      <predator>true</predator>
+      <maxPreyBodySize>2</maxPreyBodySize>
+      <trainability>Intermediate</trainability>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <baseHungerRate>0.15</baseHungerRate>
+      <foodType>CarnivoreAnimalStrict, Kibble</foodType>
+      <leatherDef>pphhyy_Leather_SanguineDeer</leatherDef>
+      <meatLabel>Sanguine venison</meatLabel>
+      <wildness>0.65</wildness>
+      <petness>0.4</petness>
+      <gestationPeriodDays>5</gestationPeriodDays>
+      <lifeExpectancy>60</lifeExpectancy>
+      <manhunterOnTameFailChance>0.6</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <packAnimal>true</packAnimal>
+      <wildBiomes>
+                <TemperateForest>0.2</TemperateForest>
+                <TemperateSwamp>0.2</TemperateSwamp>
+                <AridShrubland>0.2</AridShrubland>
+                <BorealForest>0.2</BorealForest>
+                <TropicalRainforest>0.2</TropicalRainforest>
+                <TropicalSwamp>0.2</TropicalSwamp>
+                <Tundra>0.4</Tundra>
+                <ColdBog>0.4</ColdBog>
+                <DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">0.6</DankPyon_DarkForest>
+                <!-- <Desert>0.01</Desert>
+                <ExtremeDesert>0.01</ExtremeDesert> -->
+      </wildBiomes>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3333</minAge>
+          <soundWounded>Pawn_Deer_Wounded</soundWounded>
+          <soundDeath>Pawn_Deer_Death</soundDeath>
+          <soundCall>Pawn_Deer_Call</soundCall>
+          <soundAngry>Pawn_Deer_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>pphhyy_SanguineDeer</defName>
+    <label>Sanguine Deer</label>
+    <labelPlural>Sanguine Deers</labelPlural>
+    <race>pphhyy_SanguineDeer</race>
+    <combatPower>50</combatPower>
+    <ecoSystemWeight>0.50</ecoSystemWeight>
+    <wildGroupSize>2~4</wildGroupSize>
+    <labelMale>buck</labelMale>
+    <labelFemale>doe</labelFemale>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animal/SanguineDeer/SanguineDeerFemale</texPath>
+          <drawSize>1.2</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Deer/Dessicated_DeerBaby</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animal/SanguineDeer/SanguineDeerFemale</texPath>
+          <drawSize>1.8</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Deer/Dessicated_DeerBaby</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Animal/SanguineDeer/SanguineDeerMale</texPath>
+          <drawSize>2.3</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Animal/SanguineDeer/SanguineDeerFemale</texPath>
+          <drawSize>2.3</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Deer/Dessicated_DeerFemale</texPath>
+          <drawSize>3.5</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Deer/Dessicated_DeerFemale</texPath>
+          <drawSize>1.8</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

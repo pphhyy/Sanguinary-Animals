@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>pphhyy_LaSangKibble</defName>
+    <label>LaSang Kibble</label>
+    <description>Kibble made from Blood and plants, perfect for blood feeding animals (technically not require by blood animals... yet).</description>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Item/Meal/LaSangKibble/LaSangKibble</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.015</Mass>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <foodType>Kibble</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteKibble</tasteThought>
+      <optimalityOffsetHumanlikes>-30</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>15</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetHemogen">
+          <offset>0.01</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <!-- <li Class="CompProperties_Ingredients">
+        <performMergeCompatibilityChecks>false</performMergeCompatibilityChecks>
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li> -->
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Make_LaSangKibble</defName>
+    <label>make LaSangKibble</label>
+    <description>Make LaSang Kibble by combining Blood and plants.</description>
+    <jobString>Making kibble.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+        <li>TableButcher</li>
+        <li>ButcherSpot</li>
+        <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_ButchersBlock</li>
+	  </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <customSummary>blood</customSummary>
+          <thingDefs>
+            <li>HemogenPack</li>
+          </thingDefs>
+        </filter>
+        <count>0.1</count>
+      </li>
+      <li>
+        <filter>
+          <customSummary>RawFood</customSummary>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+          <thingDefs>
+            <li>Hay</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <pphhyy_LaSangKibble>50</pphhyy_LaSangKibble>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+      <thingDefs>
+        <li>Hay</li>
+        <li>HemogenPack</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>Foods</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+</Defs>
