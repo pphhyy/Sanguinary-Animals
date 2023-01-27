@@ -8,7 +8,7 @@
 	</supportedVersions>
 	<description>Sanguinary Animals.
 	</description>
-	<modDependencies>
+	<!-- <modDependencies>
       <li>
         <packageId>brrainz.harmony</packageId>
         <displayName>Harmony</displayName>
@@ -19,13 +19,13 @@
         <displayName>Vanilla Expanded Framework</displayName>
         <steamWorkshopUrl>steam://url/CommunityFilePage/2023507013</steamWorkshopUrl>
       </li>
-    </modDependencies>
+    </modDependencies> -->
     <loadAfter>
         <li>brrainz.harmony</li>
         <li>Ludeon.RimWorld</li>
         <li>Ludeon.RimWorld.Ideology</li>
         <li>Ludeon.RimWorld.Royalty</li>
-        <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <!-- <li>oskarpotocki.vanillafactionsexpanded.core</li> -->
         <!-- <li>UnlimitedHugs.HugsLib</li>
         <li>Dylan.AnimalGear</li>
         <li>roolo.giddyupcore</li> -->
