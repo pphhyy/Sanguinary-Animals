@@ -61,6 +61,19 @@
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
       <MarketValue>50</MarketValue>
       <LeatherAmount>0</LeatherAmount>
+      <wildBiomes>
+                <TemperateForest>0.4</TemperateForest>
+                <TemperateSwamp>0.4</TemperateSwamp>
+                <AridShrubland>0.4</AridShrubland>
+                <BorealForest>0.4</BorealForest>
+                <TropicalRainforest>0.4</TropicalRainforest>
+                <TropicalSwamp>0.4</TropicalSwamp>
+                <Tundra>0.8</Tundra>
+                <ColdBog>0.8</ColdBog>
+                <DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">1.2</DankPyon_DarkForest>
+                <!-- <Desert>0.01</Desert>
+                <ExtremeDesert>0.01</ExtremeDesert> -->
+      </wildBiomes>
     </statBases>
     <uiIconScale>2</uiIconScale>
     <tools>
