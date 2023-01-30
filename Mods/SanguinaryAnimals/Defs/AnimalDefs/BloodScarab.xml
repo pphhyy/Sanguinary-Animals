@@ -98,7 +98,7 @@
     <race>
       <body>pphhyy_BloodScarabBody</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHungerRate>0.8</baseHungerRate>
+      <baseHungerRate>0.20</baseHungerRate>
       <baseHealthScale>0.5</baseHealthScale>
       <useMeatFrom>Megaspider</useMeatFrom>
       <lifeExpectancy>6</lifeExpectancy>
@@ -129,7 +129,7 @@
         </li> -->
         <li>
           <def>EusocialInsectAdult</def>
-          <minAge>0.4</minAge>
+          <minAge>0.2</minAge>
           <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
           <soundDeath>Pawn_Megascarab_Death</soundDeath>
           <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -152,8 +152,8 @@
     <canArriveManhunter>true</canArriveManhunter>
     <combatPower>40</combatPower>
     <ecoSystemWeight>0.15</ecoSystemWeight>
-    <labelMale>male</labelMale>
-    <labelFemale>female</labelFemale>
+    <labelMale>Blood Scarab</labelMale>
+    <labelFemale>Blood Scarab</labelFemale>
     <lifeStages>
       <li>
         <bodyGraphicData>
