@@ -48,7 +48,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>pphhyy_SanguineDeer</defName>
     <label>Sanguine Deer</label>
-    <description>Nocturnal fanged deer, very friendly and cute untill they need to eat. Since they usually pray on small animals they arnt much of a threat to a colony and can even make good pets. Can be sheared for a cold resistant wool, perfect for cold climates.</description>
+    <description>Nocturnal fanged deer, very friendly and cute until they need to eat. Since they usually pray on small animals they arnt much of a threat to a colony and can even make good pets. Can be sheared for a cold resistant wool, perfect for cold climates.</description>
     <modExtensions>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<bodyClock>Nocturnal</bodyClock>
