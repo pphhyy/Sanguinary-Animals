@@ -52,7 +52,7 @@
     <defName>pphhyy_Vargulf</defName>
     <label>Vargulf</label>
     <devNote>cow-1</devNote>
-    <description>Vargulfs stalk in the night, using their monstrous body to pin and feed on unsuspecting pray. They require a constant supply of meat and fresh blood. Perfect battle mounts for the night time traveler as very few creatures can stand agasint one... if you can survive taming one.</description>
+    <description>Vargulfs stalk in the night, using their monstrous body to pin and feed on unsuspecting pray. They require a constant supply of meat and fresh blood. Perfect battle mounts for the night-time traveler as very few creatures can stand against one... if you can survive taming one.</description>
     <modExtensions>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<bodyClock>Nocturnal</bodyClock>

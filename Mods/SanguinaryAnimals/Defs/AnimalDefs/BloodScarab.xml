@@ -48,7 +48,7 @@
   <ThingDef ParentName="BaseInsect">
     <defName>pphhyy_BloodScarab</defName>
     <label>BloodScarab</label>
-    <description>Not quite a tick, yet not quite a mosquito. The BloodScarab is something worse, feeding off the dead and dying the females store blood in there body for when they reach maturity and feed their offspring the blood. Those who need blood often farm the scarabs for hemogen.</description>
+    <description>Not quite a tick, yet not quite a mosquito. The BloodScarab is something worse, feeding off the dead and dying the females store blood in their body for when they reach maturity and feed their offspring the blood. Those who need blood often farm the scarabs for hemogen.</description>
     <modExtensions>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<bodyClock>Nocturnal</bodyClock>
